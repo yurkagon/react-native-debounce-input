@@ -1,7 +1,7 @@
 {
-  "name": "react-native-delay-input",
+  "name": "react-native-debounce-input",
   "version": "1.0.0",
-  "description": "React Native component that renders an Input with delayed onChange",
+  "description": "React Native component that renders an Input with delayed onChangeText",
   "main": "lib/index.js",
   "scripts": {
     "build": "NODE_ENV='production' babel src --out-dir lib && cp ./src/index.d.ts ./lib",
