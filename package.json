@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "React Native component that renders an Input with delayed onChangeText",
   "main": "lib/index.js",
+  "homepage": "https://github.com/yurkagon/react-native-debounce-input",
   "scripts": {
     "build": "NODE_ENV='production' babel src --out-dir lib && cp ./src/index.d.ts ./lib",
     "npm": "yarn build && yarn publish"
