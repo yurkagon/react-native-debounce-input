@@ -62,11 +62,11 @@ export class DelayInput extends React.PureComponent {
 
     return (
       <TextInput
-        {...props}
         onChangeText={this.onChangeText}
         onBlur={this.onBlur}
         value={value}
         ref={inputRef}
+        {...props}
       />
     );
   }
