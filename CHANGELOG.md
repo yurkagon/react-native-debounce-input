@@ -26,8 +26,6 @@ and ships no backward-compatibility shims.**
 ### Added
 
 - Written in TypeScript with first-class, shipped type definitions.
-- Exposed the underlying debounce primitive as the `useDebouncedCallback` hook
-  (`run` / `flush` / `cancel`).
 - Hybrid controlled/uncontrolled behaviour: keystrokes render instantly while the callback is
   debounced, and an external `value` change takes over and cancels any pending debounce.
 - Dual ESM + CJS builds plus raw source exposed to React Native via the `react-native` export
@@ -37,5 +35,4 @@ and ships no backward-compatibility shims.**
 
 - Rewritten from a class `PureComponent` to a memoized functional component, eliminating the
   ineffective `PureComponent` shallow-compare against an always-new `onChangeText` reference.
-- Tooling overhaul: pnpm monorepo, `tsup` build, Vitest test suite, ESLint 9 + Prettier,
-  Changesets, and GitHub Actions CI/release.
+- Tooling overhaul: pnpm monorepo, `tsup` build, Vitest test suite, and ESLint 9 + Prettier.

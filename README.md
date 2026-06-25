@@ -70,21 +70,6 @@ function Search() {
 - **External `value` wins.** Changing the `value` prop from the parent (e.g. a "clear"
   button) syncs the input and cancels any pending debounce.
 
-## `useDebouncedCallback`
-
-The debounce primitive is exported for reuse:
-
-```ts
-import { useDebouncedCallback } from "react-native-debounce-input";
-
-const search = useDebouncedCallback((q: string) => fetchResults(q), 400);
-search.run(query); // schedule
-search.flush(); // run now with the last args
-search.cancel(); // drop the pending run
-```
-
-The handle keeps a stable identity across renders and clears its timer on unmount.
-
 ## Migrating from 1.x
 
 2.0 is a clean rewrite with **breaking changes** — there are no compatibility shims. Update
@@ -122,9 +107,11 @@ pnpm build        # build the library (tsup → ESM + CJS + d.ts)
 ```
 
 The demo consumes the library source directly via `workspace:*`, so edits to the library
-hot-reload with no build step. This `README.md` is the single source of truth — it is copied
-into the package on publish. Releases are handled by
-[changesets](https://github.com/changesets/changesets) (`pnpm changeset`).
+hot-reload with no build step. `README.md`, `CHANGELOG.md`, and `LICENSE` live at the repo
+root as the single source of truth and are copied into the package on publish.
+
+To release: bump the version in `packages/debounce-input/package.json`, update `CHANGELOG.md`,
+then run `pnpm release` (requires an `npm` login) to build and publish to npm.
 
 ## License
 

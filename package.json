@@ -18,10 +18,9 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "dev": "pnpm --filter demo dev",
-    "release": "pnpm build && changeset publish"
+    "release": "pnpm --filter react-native-debounce-input publish --access public"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.10",
     "@eslint/js": "^9.18.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
