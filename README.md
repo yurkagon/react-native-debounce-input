@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/npm/l/react-native-debounce-input.svg?style=flat-square)](./LICENSE)
 
 A tiny, typed `TextInput` for **React Native** and **react-native-web** that debounces
-`onChangeText`. Type freely — your handler only fires once the user pauses (or blurs).
+`onChangeText`. ⌨️ Type away — your handler runs only after the user stops typing. ✨
 
 ![demo](https://raw.githubusercontent.com/yurkagon/react-native-debounce-input/main/react-native-debounce-input.gif)
 
@@ -69,24 +69,6 @@ function Search() {
   for the timer.
 - **External `value` wins.** Changing the `value` prop from the parent (e.g. a "clear"
   button) syncs the input and cancels any pending debounce.
-
-## Migrating from 1.x
-
-2.0 is a clean rewrite with **breaking changes** — there are no compatibility shims. Update
-your usage as follows:
-
-| 1.x            | 2.0     | Action                                           |
-| -------------- | ------- | ------------------------------------------------ |
-| `delayTimeout` | `delay` | Rename the prop.                                 |
-| `inputRef`     | `ref`   | Pass `ref` directly — the component forwards it. |
-
-Behavioural changes that may affect you:
-
-- External `value` prop changes now update the input (previously ignored).
-- Blur no longer re-fires `onChangeText` if the latest value was already committed.
-- `onChangeText` always receives a `string` (previously `string | number`).
-
-See the full [CHANGELOG](./CHANGELOG.md).
 
 ## Development
 
