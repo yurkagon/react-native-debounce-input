@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["react", "react-dom", "vite/client", "react-native"],
+    "baseUrl": ".",
+    "paths": {
+      "react-native-debounce-input": ["../../packages/debounce-input/src/index.ts"]
+    }
+  },
+  "include": ["src", "vite.config.ts"]
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["react", "react-native", "vitest/globals", "@testing-library/jest-dom"]
+  },
+  "include": ["src", "tsup.config.ts", "vitest.config.ts", "vitest.setup.ts"]
+}
