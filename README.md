@@ -3,17 +3,17 @@
 [![npm](https://img.shields.io/npm/v/react-native-debounce-input.svg?style=flat-square)](https://npmjs.com/package/react-native-debounce-input)
 [![license](https://img.shields.io/npm/l/react-native-debounce-input.svg?style=flat-square)](./LICENSE)
 
-A tiny, typed `TextInput` for **React Native** and **react-native-web** that debounces
-`onChangeText`. ⌨️ Type away — your handler runs only after the user stops typing. ✨
+A **React Native** component that renders a `TextInput` with a
+delayed `onChangeText`. It fires once the user stops typing — not on every keystroke.
 
-![demo](https://raw.githubusercontent.com/yurkagon/react-native-debounce-input/main/react-native-debounce-input.gif)
+![demo](https://raw.githubusercontent.com/yurkagon/react-native-debounce-input/main/docs/react-native-debounce-input.gif)
 
-- Zero runtime dependencies
-- Functional component, `forwardRef`, `React.memo`
-- First-class TypeScript types
-- Works on iOS, Android, and the web (react-native-web)
+- 🪶 Zero runtime dependencies
+- ⚛️ Functional component, `forwardRef`, `React.memo`
+- 🟦 First-class TypeScript types
+- 📱 Works on iOS, Android, and the web (react-native-web)
 
-## Install
+## 📦 Install
 
 ```sh
 npm install react-native-debounce-input
@@ -25,7 +25,7 @@ yarn add react-native-debounce-input
 
 `react` (>=18) and `react-native` (>=0.74) are peer dependencies.
 
-## Usage
+## 🚀 Usage
 
 ```tsx
 import { useRef, useState } from "react";
@@ -50,7 +50,7 @@ function Search() {
 
 `DelayInput` forwards every standard `TextInput` prop (`placeholder`, `style`, `keyboardType`, …).
 
-## Props
+## ⚙️ Props
 
 | Prop              | Type                      | Default | Description                                                                          |
 | ----------------- | ------------------------- | ------- | ------------------------------------------------------------------------------------ |
@@ -61,7 +61,7 @@ function Search() {
 | `ref`             | `Ref<TextInput>`          | —       | Forwarded to the underlying `TextInput`.                                             |
 | …`TextInputProps` | —                         | —       | Any other React Native `TextInput` prop.                                             |
 
-### Behaviour notes
+### 💡 Behaviour notes
 
 - **Instant feedback, debounced callback.** The input reflects every keystroke immediately;
   only `onChangeText` is debounced.
@@ -70,7 +70,7 @@ function Search() {
 - **External `value` wins.** Changing the `value` prop from the parent (e.g. a "clear"
   button) syncs the input and cancels any pending debounce.
 
-## Development
+## 🛠️ Development
 
 This repository is a [pnpm](https://pnpm.io) workspace (requires Node >=20.11):
 
@@ -95,6 +95,6 @@ root as the single source of truth and are copied into the package on publish.
 To release: bump the version in `packages/debounce-input/package.json`, update `CHANGELOG.md`,
 then run `pnpm release` (requires an `npm` login) to build and publish to npm.
 
-## License
+## 📄 License
 
 MIT © [Yurii Khvyshchuk](https://github.com/yurkagon)
