@@ -127,24 +127,4 @@ describe("DelayInput", () => {
     render(<DelayInput ref={ref} onChangeText={vi.fn()} />);
     expect(ref.current).not.toBeNull();
   });
-
-  describe("backward-compatible 1.x props", () => {
-    it("honors the deprecated delayTimeout alias", () => {
-      const onChangeText = vi.fn();
-      render(<DelayInput onChangeText={onChangeText} delayTimeout={300} minLength={1} />);
-
-      type("abc");
-      advance(299);
-      expect(onChangeText).not.toHaveBeenCalled();
-      advance(1);
-      expect(onChangeText).toHaveBeenCalledTimes(1);
-      expect(onChangeText).toHaveBeenLastCalledWith("abc");
-    });
-
-    it("honors the deprecated inputRef prop", () => {
-      const inputRef = createRef<TextInput>();
-      render(<DelayInput inputRef={inputRef} onChangeText={vi.fn()} />);
-      expect(inputRef.current).not.toBeNull();
-    });
-  });
 });

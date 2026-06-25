@@ -41,6 +41,7 @@
     "src",
     "!src/**/*.test.*",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE"
   ],
   "keywords": [
@@ -60,7 +61,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepack": "pnpm build && cp ../../README.md ./README.md && cp ../../LICENSE ./LICENSE"
+    "prepack": "pnpm build && cp ../../README.md ./README.md && cp ../../CHANGELOG.md ./CHANGELOG.md && cp ../../LICENSE ./LICENSE"
   },
   "peerDependencies": {
     "react": ">=18",

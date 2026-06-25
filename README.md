@@ -87,18 +87,21 @@ The handle keeps a stable identity across renders and clears its timer on unmoun
 
 ## Migrating from 1.x
 
-`DelayInput` is still the default and named export, and 1.x code keeps working. Two props are
-now deprecated (they still function, with a dev-only warning):
+2.0 is a clean rewrite with **breaking changes** — there are no compatibility shims. Update
+your usage as follows:
 
-| 1.x            | 2.0     | Notes                                            |
+| 1.x            | 2.0     | Action                                           |
 | -------------- | ------- | ------------------------------------------------ |
-| `delayTimeout` | `delay` | `delayTimeout` is still accepted as a fallback.  |
-| `inputRef`     | `ref`   | Pass `ref` directly (the component forwards it). |
+| `delayTimeout` | `delay` | Rename the prop.                                 |
+| `inputRef`     | `ref`   | Pass `ref` directly — the component forwards it. |
 
-Behavioural fixes in 2.0 that may affect you:
+Behavioural changes that may affect you:
 
 - External `value` prop changes now update the input (previously ignored).
 - Blur no longer re-fires `onChangeText` if the latest value was already committed.
+- `onChangeText` always receives a `string` (previously `string | number`).
+
+See the full [CHANGELOG](./CHANGELOG.md).
 
 ## Development
 
