@@ -28,17 +28,20 @@ yarn add react-native-debounce-input
 ## 🚀 Usage
 
 ```tsx
-import { useRef, useState } from "react";
-import { TextInput } from "react-native";
+import { useEffect, useState } from "react";
 import { DelayInput } from "react-native-debounce-input";
 
 function Search() {
-  const [query, setQuery] = useState("");
-  const inputRef = useRef<TextInput>(null);
+  const [query, setQuery] = useState("react native");
+
+  useEffect(() => {
+    // Runs only after the user pauses typing — not on every keystroke.
+    if (query) fetch(`/api/search?q=${query}`);
+  }, [query]);
 
   return (
     <DelayInput
-      ref={inputRef}
+      value={query} // initial text, also synced if you change it externally
       placeholder="Search…"
       delay={500}
       minLength={3}
@@ -48,7 +51,8 @@ function Search() {
 }
 ```
 
-`DelayInput` forwards every standard `TextInput` prop (`placeholder`, `style`, `keyboardType`, …).
+`DelayInput` forwards every standard `TextInput` prop (`placeholder`, `style`, `keyboardType`,
+`ref`, …).
 
 ## ⚙️ Props
 
