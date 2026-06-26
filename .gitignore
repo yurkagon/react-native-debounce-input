@@ -1,19 +1,32 @@
 # Logs
 logs
 *.log
+npm-debug.log*
+pnpm-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
+# Dependencies
+node_modules/
 
-# Dependency directory
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
-/node_modules/
+# Build output
+dist/
+lib/
+build/
+*.tsbuildinfo
+*.tgz
 
-/build/
-/lib/
-/pub/
-/reports/
+# Generated package files (copied from the repo root on publish)
+packages/debounce-input/README.md
+packages/debounce-input/CHANGELOG.md
+packages/debounce-input/LICENSE
 
-/.eslintcache
+# Test / coverage
+coverage/
+
+# Tooling caches
+.eslintcache
+.vite/
+.turbo/
+
+# Editor / OS
+.DS_Store
+.idea/

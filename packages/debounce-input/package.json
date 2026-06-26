@@ -1,0 +1,85 @@
+{
+  "name": "react-native-debounce-input",
+  "version": "2.0.0",
+  "description": "A React Native (and react-native-web) TextInput that debounces onChangeText.",
+  "homepage": "https://github.com/yurkagon/react-native-debounce-input#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yurkagon/react-native-debounce-input.git",
+    "directory": "packages/debounce-input"
+  },
+  "bugs": {
+    "url": "https://github.com/yurkagon/react-native-debounce-input/issues"
+  },
+  "license": "MIT",
+  "author": "Yurii Khvyshchuk <owngameplay@gmail.com>",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "react-native": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "react-native": "./src/index.ts",
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!src/**/*.test.*",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "react",
+    "react-native",
+    "react-native-web",
+    "react-component",
+    "component",
+    "input",
+    "textinput",
+    "debounce",
+    "delay",
+    "throttle"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepack": "pnpm build && cp ../../README.md ./README.md && cp ../../CHANGELOG.md ./CHANGELOG.md && cp ../../LICENSE ./LICENSE"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.74"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@types/react": "^19.0.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "jsdom": "^25.0.1",
+    "publint": "^0.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-native": "^0.79.0",
+    "react-native-web": "^0.20.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}
