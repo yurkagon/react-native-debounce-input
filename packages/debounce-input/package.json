@@ -1,6 +1,6 @@
 {
   "name": "react-native-debounce-input",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A React Native (and react-native-web) TextInput that debounces onChangeText.",
   "homepage": "https://github.com/yurkagon/react-native-debounce-input#readme",
   "repository": {
@@ -71,7 +71,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@types/react": "^19.0.0",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@vitest/coverage-v8": "^4.1.11",
     "jsdom": "^25.0.1",
     "publint": "^0.3.2",
     "react": "^19.0.0",
@@ -80,6 +80,6 @@
     "react-native-web": "^0.20.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.3",
-    "vitest": "^2.1.8"
+    "vitest": "^4.1.11"
   }
 }

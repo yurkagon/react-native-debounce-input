@@ -1,6 +1,6 @@
 {
   "name": "react-native-debounce-input-monorepo",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "description": "Monorepo for react-native-debounce-input and its development demo",
   "homepage": "https://github.com/yurkagon/react-native-debounce-input",
